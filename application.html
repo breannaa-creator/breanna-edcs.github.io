@@ -1,3 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Applying the Ideas</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #eef2f3, #ffffff);
+}
+
+/* NAVBAR */
+.navbar {
+  background: #2c3e50;
+  padding: 15px;
+  text-align: center;
+}
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #1abc9c;
+}
+
+/* HEADER */
+.hero {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #3498db, #1abc9c);
+  color: white;
+  border-radius: 0 0 30px 30px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  margin: 30px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* stagger animation */
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.4s; }
+.card:nth-child(4) { animation-delay: 0.6s; }
+
+/* COLORS */
+.green { border-left: 8px solid #2ecc71; }
+.blue { border-left: 8px solid #3498db; }
+.orange { border-left: 8px solid #e67e22; }
+
+/* animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* small labels */
+.tag {
+  display: inline-block;
+  background: #ecf0f1;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+</style>
+
+</head>
+
+<body>
+
 <div class="navbar">
   <a href="index.html">Home</a>
   <a href="concepts.html">Concepts</a>
@@ -6,17 +89,69 @@
   <a href="philosophy.html">My Teaching</a>
 </div>
 
-<h1>A Quick Guide to Applying the Ideas</h1>
+<div class="hero">
+  <h1> Applying STEM Pedagogy</h1>
+  <p>Transitioning from concepts to classrooms</p>
+</div>
 
-<h2>Think-Pair-Share 👥</h2>
-<p>- Think alone</p>
-<p>- Discuss with partner</p>
-<p>- Share out and discuss</p>
+<!-- THINK PAIR SHARE -->
+<div class="card blue">
+  <h2> Think–Pair–Share</h2>
 
-<h2>Wait Time ⏳</h2>
-<p>- Pause after questions</p>
-<p>- Improves responses, student works through more ideas</p>
+  <p><b>How it works:</b></p>
+  <p>- 1) Think individually</p>
+  <p>- 2) Team up with a group or partner</p>
+  <p>- 3) Share out loud and discuss</p>
 
-<h2>Growth Mindset 🌱</h2>
-<p>- Praise effort</p>
-<p>- Normalize mistakes</p>
+  <p><b>In the classroom:</b></p>
+  <p>- Used during discussions to get everyone talking</p>
+  <p>- Helped quieter students participate</p>
+
+  <p><b>Example (Calulus):</b></p>
+  <p>- Attempt a calculus problem individually</p>
+  <p>- Compare strategies and thought process with partner</p>
+  <p>- Analyze different approaches</p>
+
+  <span class="tag">Collaboration</span>
+</div>
+
+<!-- WAIT TIME -->
+<div class="card orange">
+  <h2> Wait Time</h2>
+
+  <p><b>How it works:</b></p>
+  <p>- Pause after asking a question</p>
+  <p>- Give students time to think and answer</p>
+
+  <p><b>In the classroom:</b></p>
+  <p>- We saw longer pauses which led to more thought out answers</p>
+  <p>- Students explained thinking more deeply and understood concepts</p>
+
+  <p><b>Example:</b></p>
+  <p>- Ask: “What conditions must be met to apply this test? Why?”</p>
+  <p>- Wait 5–10 seconds in silence. Provide additional prompts if necessary</p>
+
+  <span class="tag">Questioning</span>
+</div>
+
+<!-- GROWTH MINDSET -->
+<div class="card green">
+  <h2> Growth Mindset</h2>
+
+  <p><b>How it works:</b></p>
+  <p>- Focus on effort and improvement, not just correctness</p>
+  <p>- Normalize mistakes as part of the learning process</p>
+
+  <p><b>In the classroom:</b></p>
+  <p>- Emphasis on students improving over time</p>
+  <p>- Shift away from “right answer only”</p>
+
+  <p><b>Example:</b></p>
+  <p>- Say: “Your approach improved since last time”</p>
+  <p>- Encourage revising work and learning from mistakes</p>
+
+  <span class="tag">Student mindset</span>
+</div>
+
+</body>
+</html>
