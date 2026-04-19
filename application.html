@@ -4,29 +4,66 @@
 <title>Applying the Ideas</title>
 
 <style>
+
+/* =========================
+   GLOBAL STYLE
+========================= */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   background: linear-gradient(to right, #eef2f3, #ffffff);
+  animation: fadeIn 0.8s ease;
 }
 
-/* NAVBAR */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   NAVBAR (consistent site-wide)
+========================= */
 .navbar {
-  background: #2c3e50;
+  background: linear-gradient(90deg, #2c3e50, #1a252f);
   padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 .navbar a {
   color: white;
-  margin: 0 15px;
+  margin: 0 18px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
 }
+
 .navbar a:hover {
   color: #1abc9c;
 }
 
-/* HEADER */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #1abc9c;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   HERO HEADER
+========================= */
 .hero {
   text-align: center;
   padding: 60px;
@@ -35,7 +72,9 @@ body {
   border-radius: 0 0 30px 30px;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 .card {
   background: white;
   margin: 30px;
@@ -46,12 +85,17 @@ body {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 0.8s ease forwards;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 /* stagger animation */
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.4s; }
-.card:nth-child(4) { animation-delay: 0.6s; }
+.card:nth-of-type(1) { animation-delay: 0.2s; }
+.card:nth-of-type(2) { animation-delay: 0.4s; }
+.card:nth-of-type(3) { animation-delay: 0.6s; }
 
 /* COLORS */
 .green { border-left: 8px solid #2ecc71; }
@@ -66,7 +110,7 @@ body {
   }
 }
 
-/* small labels */
+/* TAGS */
 .tag {
   display: inline-block;
   background: #ecf0f1;
@@ -75,80 +119,96 @@ body {
   margin-top: 10px;
   font-size: 12px;
 }
-</style>
 
+/* headings spacing */
+h2 {
+  margin-top: 0;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="concepts.html">Concepts</a>
-  <a href="application.html">Application</a>
-  <a href="connections.html">Connections</a>
-  <a href="philosophy.html">My Teaching</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="concepts.html">📚 Concepts</a>
+  <a href="application.html">🛠️ Application</a>
+  <a href="connections.html">🔗 Connections</a>
+  <a href="philosophy.html">🌱 My Teaching</a>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <h1> Applying STEM Pedagogy</h1>
-  <p>Transitioning from concepts to classrooms</p>
+  <h1>📘 Applying STEM Pedagogy</h1>
+  <p>From theory → classroom practice → student learning</p>
 </div>
 
 <!-- THINK PAIR SHARE -->
 <div class="card blue">
-  <h2> Think–Pair–Share</h2>
+  <h2>👥 Think–Pair–Share</h2>
 
   <p><b>How it works:</b></p>
-  <p>- 1) Think individually</p>
-  <p>- 2) Team up with a group or partner</p>
-  <p>- 3) Share out loud and discuss</p>
+  <p>1. Think individually about a problem or question</p>
+  <p>2. Pair with a partner or small group</p>
+  <p>3. Share and compare reasoning with the class</p>
 
   <p><b>In the classroom:</b></p>
-  <p>- Used during discussions to get everyone talking</p>
-  <p>- Helped quieter students participate</p>
+  <p>- Encourages participation from all students</p>
+  <p>- Gives quieter students structured speaking opportunities</p>
+  <p>- Helps students compare reasoning strategies</p>
 
-  <p><b>Example (Calulus):</b></p>
-  <p>- Attempt a calculus problem individually</p>
-  <p>- Compare strategies and thought process with partner</p>
-  <p>- Analyze different approaches</p>
+  <p><b>Example (Calculus):</b></p>
+  <p>- Solve a derivative problem individually</p>
+  <p>- Compare steps and methods with a partner</p>
+  <p>- Discuss why different approaches still reach the same result</p>
+
+  <p><b>Why it matters:</b> Builds communication, reasoning, and confidence in problem-solving.</p>
 
   <span class="tag">Collaboration</span>
 </div>
 
 <!-- WAIT TIME -->
 <div class="card orange">
-  <h2> Wait Time</h2>
+  <h2>⏳ Wait Time</h2>
 
   <p><b>How it works:</b></p>
-  <p>- Pause after asking a question</p>
-  <p>- Give students time to think and answer</p>
+  <p>- Pause after asking a question before calling on students</p>
+  <p>- Allow silence for thinking time</p>
 
   <p><b>In the classroom:</b></p>
-  <p>- We saw longer pauses which led to more thought out answers</p>
-  <p>- Students explained thinking more deeply and understood concepts</p>
+  <p>- Longer pauses led to deeper and more complete answers</p>
+  <p>- Students were more willing to explain reasoning</p>
+  <p>- Reduced rushed or surface-level responses</p>
 
   <p><b>Example:</b></p>
-  <p>- Ask: “What conditions must be met to apply this test? Why?”</p>
-  <p>- Wait 5–10 seconds in silence. Provide additional prompts if necessary</p>
+  <p>- “Why does this limit approach infinity?”</p>
+  <p>- Wait 5–10 seconds before responding or prompting further</p>
+
+  <p><b>Why it matters:</b> Supports deeper cognitive processing and equity in participation.</p>
 
   <span class="tag">Questioning</span>
 </div>
 
 <!-- GROWTH MINDSET -->
 <div class="card green">
-  <h2> Growth Mindset</h2>
+  <h2>🌱 Growth Mindset</h2>
 
   <p><b>How it works:</b></p>
-  <p>- Focus on effort and improvement, not just correctness</p>
-  <p>- Normalize mistakes as part of the learning process</p>
+  <p>- Focus on progress, effort, and improvement</p>
+  <p>- Normalize mistakes as part of learning</p>
 
   <p><b>In the classroom:</b></p>
-  <p>- Emphasis on students improving over time</p>
-  <p>- Shift away from “right answer only”</p>
+  <p>- Students are encouraged to revise thinking</p>
+  <p>- Feedback emphasizes process, not just correctness</p>
+  <p>- Mistakes are treated as learning opportunities</p>
 
   <p><b>Example:</b></p>
-  <p>- Say: “Your approach improved since last time”</p>
-  <p>- Encourage revising work and learning from mistakes</p>
+  <p>- “Your setup is improving—try refining this step”</p>
+  <p>- “What did you learn from this attempt?”</p>
+
+  <p><b>Why it matters:</b> Builds resilience and long-term confidence in STEM learning.</p>
 
   <span class="tag">Student mindset</span>
 </div>
