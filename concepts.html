@@ -2,24 +2,42 @@
 <html>
 <head>
 <style>
+
+/* =========================
+   GLOBAL STYLE
+========================= */
 body { 
   font-family: 'Segoe UI', sans-serif; 
   margin: 0; 
   background: linear-gradient(to right, #eef2f3, #ffffff);
+  animation: fadeIn 0.8s ease;
 }
 
-/* NAVBAR (matches your other page) */
+/* PAGE FADE-IN */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
-  background: #2c3e50;
+  background: linear-gradient(90deg, #2c3e50, #1a252f);
   padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .navbar a {
   color: white;
-  margin: 0 15px;
+  margin: 0 18px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  position: relative;
   transition: 0.3s;
 }
 
@@ -27,13 +45,32 @@ body {
   color: #1abc9c;
 }
 
-/* PAGE TITLE */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #1abc9c;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   TITLE
+========================= */
 h1 {
   text-align: center;
   padding: 30px;
 }
 
-/* SECTION CARDS */
+/* =========================
+   SECTION CARDS
+========================= */
 .section {
   padding: 20px;
   border-radius: 15px;
@@ -41,7 +78,6 @@ h1 {
   color: white;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 
-  /* animation */
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 0.8s ease forwards;
@@ -67,69 +103,111 @@ h1 {
 .orange { background: #e67e22; }
 .yellow { background: #f1c40f; color: black; }
 
-/* animation */
+/* ANIMATION */
 @keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 </style>
 </head>
 
 <body>
 
-  <div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="concepts.html">Concepts</a>
-  <a href="application.html">Application</a>
-  <a href="connections.html">Connections</a>
-  <a href="philosophy.html">My Teaching</a>
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="index.html">🏠 Home</a>
+  <a href="concepts.html">📚 Concepts</a>
+  <a href="application.html">🛠️ Application</a>
+  <a href="connections.html">🔗 Connections</a>
+  <a href="philosophy.html">🌱 My Teaching</a>
 </div>
 
+<!-- TITLE -->
 <h1>Core Concepts</h1>
 
+<!-- GROWTH MINDSET -->
 <div class="section green">
 <h2>🌱 Growth Mindset</h2>
-<p><b>Assumption:</b> That everyone has the ability to learn. Switch from "I can't do this" to "I can't do this yet"</p>
-<p><b>Strength:</b> Builds persistence, expands learning </p>
-<p><b>Weakness:</b> Ignores barriers. Sometimes, some things really can't be learnt</p>
-<p><b>My Teaching:</b> Effort-based feedback. For example: "That's a great way to think about it! Try tweaking this..."</p>
+
+<p><b>Assumption:</b> Everyone has the ability to learn. Ability grows with effort and support (“I can’t do this yet”).</p>
+
+<p><b>Strength:</b> Builds persistence, resilience, and long-term learning habits.</p>
+
+<p><b>Weakness:</b> Can ignore real barriers such as time, resources, or prior preparation.</p>
+
+<p><b>My Teaching:</b> Use effort-based feedback like: “That’s a strong approach—what happens if you adjust this step?”</p>
+
+<p><b>Class connection:</b> We focused on shifting language from correctness to process and thinking.</p>
+
 <p><a href="https://www.ted.com/talks/rita_pierson_every_kid_needs_a_champion">Watch video</a></p>
 </div>
 
+<!-- STRENGTH BASED -->
 <div class="section blue">
-<h2>💪 Strength-Based</h2>
-<p><b>Assumption:</b> Students have assets and various forms of capital</p>
-<p><b>Strength:</b> Builds confidence and helps students maximize their learning</p>
-<p><b>Weakness:</b> Hard to implement and can vary alot person to person</p>
-<p><b>My Teaching:</b> Focus on strengths. Question whether they learn visually, audibly...</p>
+<h2>💪 Strength-Based Education</h2>
+
+<p><b>Assumption:</b> Students bring valuable knowledge, experiences, and “capital” into learning spaces.</p>
+
+<p><b>Strength:</b> Increases confidence and student engagement by valuing existing abilities.</p>
+
+<p><b>Weakness:</b> Can be difficult to apply consistently across diverse learners.</p>
+
+<p><b>My Teaching:</b> Identify how students learn best (visual, verbal, collaborative) and build from that.</p>
+
+<p><b>Class connection:</b> We discussed cultural, social, and material capital in learning.</p>
+
 <p><a href="https://99percentinvisible.org/episode/on-average/">Listen podcast</a></p>
 </div>
 
+<!-- EQUITY -->
 <div class="section purple">
 <h2>🤝 Equity & Inclusion</h2>
-<p><b>Assumption:</b> Systems and ubringing impact learning</p>
-<p><b>Strength:</b> Promotes fairness, aims to provide equal opportunity</p>
-<p><b>Weakness:</b> Complex to apply especially in the role of a Learning Assistant</p>
-<p><b>My Teaching:</b> Encourage inclusive groups and quiet students to pitch in</p>
+
+<p><b>Assumption:</b> Student outcomes are shaped by systems, identity, and access—not ability alone.</p>
+
+<p><b>Strength:</b> Promotes fairness and more inclusive participation in STEM learning.</p>
+
+<p><b>Weakness:</b> Complex to implement in real classroom settings and roles like Learning Assistant.</p>
+
+<p><b>My Teaching:</b> Encourage quieter students, balance group roles, and design inclusive participation.</p>
+
+<p><b>Class connection:</b> We explored “single stories” and representation in STEM.</p>
+
 <p><a href="https://teach.its.uiowa.edu/book/export/html/582">Read article</a></p>
 </div>
 
+<!-- GROUP WORK -->
 <div class="section orange">
 <h2>👥 Group Work</h2>
-<p><b>Assumption:</b> Learning is social</p>
-<p><b>Strength:</b> Engages students and forces them to think deeply about their understanding</p>
-<p><b>Weakness:</b> Unequal participation - more difficult for introverted students</p>
-<p><b>My Teaching:</b> Think-Pair-Share. Recognize students on the same problem and promote groupwork</p>
+
+<p><b>Assumption:</b> Learning is social and improves through collaboration.</p>
+
+<p><b>Strength:</b> Encourages deeper thinking and multiple problem-solving strategies.</p>
+
+<p><b>Weakness:</b> Participation can be uneven among group members.</p>
+
+<p><b>My Teaching:</b> Use Think–Pair–Share and intentionally group students by engagement.</p>
+
+<p><b>Class connection:</b> We practiced facilitation strategies and group structure design.</p>
 </div>
 
+<!-- QUESTIONING -->
 <div class="section yellow">
 <h2>❓ Questioning</h2>
-<p><b>Assumption:</b> Questions drive thinking, implements ideas much better than giving an answer</p>
-<p><b>Strength:</b> Deep understanding of the concept - not just memorizing the problem</p>
-<p><b>Weakness:</b> Difficult to come up with on the spot, especially catering to different learning styles</p>
-<p><b>My Teaching:</b> Practice forming guiding questions and use wait time</p>
+
+<p><b>Assumption:</b> Questions drive understanding better than direct answers.</p>
+
+<p><b>Strength:</b> Builds conceptual understanding and critical thinking.</p>
+
+<p><b>Weakness:</b> Hard to design effective questions spontaneously.</p>
+
+<p><b>My Teaching:</b> Use structured questioning (Costa’s Levels) and intentional wait time.</p>
+
+<p><b>Class connection:</b> We practiced Bloom’s Taxonomy and levels of questioning.</p>
+
 <p><a href="http://levelquestions.weebly.com/costas.html">View Costa’s Levels</a></p>
 </div>
 
