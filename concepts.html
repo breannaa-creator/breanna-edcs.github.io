@@ -2,19 +2,78 @@
 <html>
 <head>
 <style>
-body { font-family: Arial; margin: 40px; }
-
-.section {
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  color: white;
+body { 
+  font-family: 'Segoe UI', sans-serif; 
+  margin: 0; 
+  background: linear-gradient(to right, #eef2f3, #ffffff);
 }
+
+/* NAVBAR (matches your other page) */
+.navbar {
+  background: #2c3e50;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #1abc9c;
+}
+
+/* PAGE TITLE */
+h1 {
+  text-align: center;
+  padding: 30px;
+}
+
+/* SECTION CARDS */
+.section {
+  padding: 20px;
+  border-radius: 15px;
+  margin: 30px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* stagger animation */
+.section:nth-of-type(1) { animation-delay: 0.2s; }
+.section:nth-of-type(2) { animation-delay: 0.4s; }
+.section:nth-of-type(3) { animation-delay: 0.6s; }
+.section:nth-of-type(4) { animation-delay: 0.8s; }
+.section:nth-of-type(5) { animation-delay: 1s; }
+
+/* hover effect */
+.section:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+/* COLORS */
 .green { background: #2ecc71; }
 .blue { background: #3498db; }
 .purple { background: #9b59b6; }
 .orange { background: #e67e22; }
 .yellow { background: #f1c40f; color: black; }
+
+/* animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 </head>
 
@@ -32,9 +91,9 @@ body { font-family: Arial; margin: 40px; }
 
 <div class="section green">
 <h2>🌱 Growth Mindset</h2>
-<p><b>Assumption:</b> That everyone has the ability to learn. Switch from "I can't do this" to "I can't do this yet" s</p>
+<p><b>Assumption:</b> That everyone has the ability to learn. Switch from "I can't do this" to "I can't do this yet"</p>
 <p><b>Strength:</b> Builds persistence, expands learning </p>
-<p><b>Weakness:</b> Ignores barriers. Sometimes, some things really can't be learnt.</p>
+<p><b>Weakness:</b> Ignores barriers. Sometimes, some things really can't be learnt</p>
 <p><b>My Teaching:</b> Effort-based feedback. For example: "That's a great way to think about it! Try tweaking this..."</p>
 <p><a href="https://www.ted.com/talks/rita_pierson_every_kid_needs_a_champion">Watch video</a></p>
 </div>
@@ -43,7 +102,7 @@ body { font-family: Arial; margin: 40px; }
 <h2>💪 Strength-Based</h2>
 <p><b>Assumption:</b> Students have assets and various forms of capital</p>
 <p><b>Strength:</b> Builds confidence and helps students maximize their learning</p>
-<p><b>Weakness:</b> Hard to implementand can vary alot person to person</p>
+<p><b>Weakness:</b> Hard to implement and can vary alot person to person</p>
 <p><b>My Teaching:</b> Focus on strengths. Question whether they learn visually, audibly...</p>
 <p><a href="https://99percentinvisible.org/episode/on-average/">Listen podcast</a></p>
 </div>
@@ -69,7 +128,7 @@ body { font-family: Arial; margin: 40px; }
 <h2>❓ Questioning</h2>
 <p><b>Assumption:</b> Questions drive thinking, implements ideas much better than giving an answer</p>
 <p><b>Strength:</b> Deep understanding of the concept - not just memorizing the problem</p>
-<p><b>Weakness:</b> Difficult to come up with on the spot and often caters to different learning styles</p>
+<p><b>Weakness:</b> Difficult to come up with on the spot, especially catering to different learning styles</p>
 <p><b>My Teaching:</b> Practice forming guiding questions and use wait time</p>
 <p><a href="http://levelquestions.weebly.com/costas.html">View Costa’s Levels</a></p>
 </div>
