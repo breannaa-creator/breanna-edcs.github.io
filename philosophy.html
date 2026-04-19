@@ -11,9 +11,9 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  animation: fadeIn 1s ease;
+  background: linear-gradient(to right, #eef2f3, #ffffff);
+  color: #2c3e50;
+  animation: fadeIn 0.8s ease;
 }
 
 @keyframes fadeIn {
@@ -22,17 +22,16 @@ body {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (MATCHED SITE WIDE)
 ========================= */
 .navbar {
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(90deg, #2c3e50, #1a252f);
   padding: 15px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .navbar a {
@@ -64,24 +63,26 @@ body {
 }
 
 /* =========================
-   HERO
+   HERO (FORWARD MOTION THEME)
 ========================= */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
   background: linear-gradient(135deg, #1abc9c, #3498db);
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  color: white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 10px;
 }
 
 .hero p {
-  opacity: 0.9;
   font-size: 18px;
+  opacity: 0.95;
 }
 
 /* =========================
@@ -94,15 +95,15 @@ body {
 }
 
 /* =========================
-   REFLECTION CARDS
+   CARDS
 ========================= */
 .card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: white;
+  border-left: 6px solid #1abc9c;
   padding: 25px;
   margin: 20px 0;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 
   opacity: 0;
   transform: translateY(30px);
@@ -118,6 +119,7 @@ body {
 .card:nth-of-type(2) { animation-delay: 0.4s; }
 .card:nth-of-type(3) { animation-delay: 0.6s; }
 .card:nth-of-type(4) { animation-delay: 0.8s; }
+.card:nth-of-type(5) { animation-delay: 1s; }
 
 @keyframes slideUp {
   to {
@@ -127,10 +129,10 @@ body {
 }
 
 /* =========================
-   TEXT STYLING
+   TEXT STYLE
 ========================= */
 h2 {
-  color: #1abc9c;
+  color: #2c3e50;
 }
 
 .highlight {
@@ -140,10 +142,10 @@ h2 {
 
 .quote {
   font-style: italic;
-  opacity: 0.9;
   border-left: 3px solid #1abc9c;
-  padding-left: 10px;
+  padding-left: 12px;
   margin-top: 10px;
+  opacity: 0.85;
 }
 
 </style>
@@ -162,87 +164,80 @@ h2 {
 <!-- HERO -->
 <div class="hero">
   <h1>🌱 Moving Forward as an Educator</h1>
-  <p>My teaching philosophy after EDCS 417 — from learning theory → classroom practice → future application</p>
+  <p>From theory → practice → identity: integrating EDCS 417 into my teaching practice</p>
 </div>
 
 <!-- CONTENT -->
 <div class="container">
 
   <div class="card">
-    <h2>📌 What I Now Understand About Learning</h2>
+    <h2>📌 Reframing What Learning Is</h2>
     <p>
-      Before this course, I thought teaching was primarily about explaining content clearly.
-      Now I understand that learning is not transmission — it is <span class="highlight">construction through interaction, questioning, and reflection</span>.
+      EDCS 417 shifted my understanding of learning from content delivery to
+      <span class="highlight">active meaning-making through interaction, reflection, and questioning</span>.
     </p>
 
     <p class="quote">
-      “Students do not simply receive knowledge — they build it through experience, dialogue, and feedback.”
+      Learning is not something students receive — it is something they construct.
     </p>
   </div>
 
   <div class="card">
-    <h2>🧠 Recognizing Student Strengths</h2>
+    <h2>🧠 Seeing Students as Resource-Rich Learners</h2>
     <p>
-      A major shift in my thinking is recognizing that students bring
-      <span class="highlight">cultural, social, and academic capital</span> into the classroom.
+      A key shift in my thinking is recognizing that students bring
+      <span class="highlight">cultural, social, and academic capital</span> into every learning space.
     </p>
 
     <p>
-      Instead of focusing on what students lack, I now focus on how to
-      <b>activate what they already know</b> and connect it to new ideas.
-    </p>
-
-    <p class="quote">
-      This reframes teaching from “fixing gaps” to “building from strengths.”
+      My role is not to “fill gaps,” but to connect instruction to what students already know and experience.
     </p>
   </div>
 
   <div class="card">
-    <h2>🤝 Teaching as Facilitation, Not Delivery</h2>
+    <h2>🤝 From Instructor to Facilitator</h2>
     <p>
-      One of the most important lessons from EDCS 417 is that effective teaching requires shifting from
-      <span class="highlight">“sage on the stage” to “guide on the side.”</span>
+      Effective teaching is less about explaining and more about designing environments where students think together.
     </p>
 
     <p>
-      Strategies like Think-Pair-Share, wait time, and structured questioning
-      are not just techniques — they are tools that
-      <b>redistribute voice and support equity in participation</b>.
+      Strategies like Think-Pair-Share, wait time, and structured grouping
+      redistribute participation and support equity.
     </p>
   </div>
 
   <div class="card">
-    <h2>❓ The Power of Questions</h2>
+    <h2>❓ Questioning as Instruction</h2>
     <p>
-      I have learned that strong teaching is not defined by providing answers,
-      but by asking questions that guide thinking.
+      One of the most powerful tools I learned is the intentional use of questioning.
     </p>
 
     <p>
-      Using wait time, layered questioning, and follow-ups allows students to
-      develop deeper reasoning instead of surface-level responses.
+      Using frameworks like Bloom’s Taxonomy and Costa’s Levels of Questioning helps shift students from
+      memorization → reasoning → explanation.
     </p>
 
     <p class="quote">
-      In practice, questioning became more powerful than explanation.
+      Good teaching is less about answers and more about guiding better questions.
     </p>
   </div>
 
   <div class="card">
     <h2>🚀 Moving Forward</h2>
     <p>
-      As I move forward, my goal is to intentionally apply these ideas in real classroom settings:
+      As I move forward into future teaching spaces, I aim to consistently apply these principles:
     </p>
 
     <p>
-      • Design learning environments centered on student thinking<br>
-      • Use equitable participation structures in group work<br>
-      • Prioritize growth mindset feedback over correctness alone<br>
-      • Continuously reflect and adapt based on student needs
+      • Design learning around student thinking, not teacher explanation<br>
+      • Use strengths-based approaches in every interaction<br>
+      • Build equitable participation structures in group work<br>
+      • Apply growth mindset feedback intentionally<br>
+      • Continuously reflect and adjust practice based on student response
     </p>
 
     <p class="quote">
-      Teaching is not a finished skill — it is an evolving practice shaped by reflection and experience.
+      Teaching is not a destination — it is a continuous process of becoming.
     </p>
   </div>
 
