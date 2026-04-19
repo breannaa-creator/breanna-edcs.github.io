@@ -13,14 +13,13 @@ body {
   animation: fadeIn 0.8s ease;
 }
 
-/* PAGE FADE-IN */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (MATCHES INDEX)
 ========================= */
 .navbar {
   background: linear-gradient(90deg, #2c3e50, #1a252f);
@@ -83,17 +82,22 @@ h1 {
   animation: fadeUp 0.8s ease forwards;
 }
 
-/* stagger animation */
 .section:nth-of-type(1) { animation-delay: 0.2s; }
 .section:nth-of-type(2) { animation-delay: 0.4s; }
 .section:nth-of-type(3) { animation-delay: 0.6s; }
 .section:nth-of-type(4) { animation-delay: 0.8s; }
 .section:nth-of-type(5) { animation-delay: 1s; }
 
-/* hover effect */
 .section:hover {
   transform: scale(1.03);
   transition: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* COLORS */
@@ -103,111 +107,72 @@ h1 {
 .orange { background: #e67e22; }
 .yellow { background: #f1c40f; color: black; }
 
-/* ANIMATION */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (FIXED + CONSISTENT WITH INDEX) -->
 <div class="navbar">
   <a href="index.html">🏠 Home</a>
   <a href="concepts.html">📚 Concepts</a>
   <a href="application.html">🛠️ Application</a>
-  <a href="connections.html">🔗 Connections</a>
   <a href="philosophy.html">🌱 My Teaching</a>
 </div>
 
-<!-- TITLE -->
 <h1>Core Concepts</h1>
 
 <!-- GROWTH MINDSET -->
 <div class="section green">
 <h2>🌱 Growth Mindset</h2>
-
 <p><b>Assumption:</b> Everyone has the ability to learn. Ability grows with effort and support (“I can’t do this yet”).</p>
-
 <p><b>Strength:</b> Builds persistence, resilience, and long-term learning habits.</p>
-
-<p><b>Weakness:</b> Can ignore real barriers such as time, resources, or prior preparation.</p>
-
-<p><b>My Teaching:</b> Use effort-based feedback like: “That’s a strong approach—what happens if you adjust this step?”</p>
-
-<p><b>Class connection:</b> We focused on shifting language from correctness to process and thinking.</p>
-
+<p><b>Weakness:</b> Can ignore real barriers such as time or structural inequities.</p>
+<p><b>My Teaching:</b> “That’s a strong approach—what happens if you adjust this step?”</p>
+<p><b>Class connection:</b> Shifted focus from correctness → process.</p>
 <p><a href="https://www.ted.com/talks/rita_pierson_every_kid_needs_a_champion">Watch video</a></p>
 </div>
 
 <!-- STRENGTH BASED -->
 <div class="section blue">
 <h2>💪 Strength-Based Education</h2>
-
-<p><b>Assumption:</b> Students bring valuable knowledge, experiences, and “capital” into learning spaces.</p>
-
-<p><b>Strength:</b> Increases confidence and student engagement by valuing existing abilities.</p>
-
-<p><b>Weakness:</b> Can be difficult to apply consistently across diverse learners.</p>
-
-<p><b>My Teaching:</b> Identify how students learn best (visual, verbal, collaborative) and build from that.</p>
-
-<p><b>Class connection:</b> We discussed cultural, social, and material capital in learning.</p>
-
+<p><b>Assumption:</b> Students bring cultural, social, and academic “capital” into learning.</p>
+<p><b>Strength:</b> Builds confidence by valuing student identity and experience.</p>
+<p><b>Weakness:</b> Hard to consistently adapt to every learner in real time.</p>
+<p><b>My Teaching:</b> Adjust explanations based on student learning style.</p>
+<p><b>Class connection:</b> Cultural / social / material capital discussion.</p>
 <p><a href="https://99percentinvisible.org/episode/on-average/">Listen podcast</a></p>
 </div>
 
 <!-- EQUITY -->
 <div class="section purple">
 <h2>🤝 Equity & Inclusion</h2>
-
-<p><b>Assumption:</b> Student outcomes are shaped by systems, identity, and access—not ability alone.</p>
-
-<p><b>Strength:</b> Promotes fairness and more inclusive participation in STEM learning.</p>
-
-<p><b>Weakness:</b> Complex to implement in real classroom settings and roles like Learning Assistant.</p>
-
-<p><b>My Teaching:</b> Encourage quieter students, balance group roles, and design inclusive participation.</p>
-
-<p><b>Class connection:</b> We explored “single stories” and representation in STEM.</p>
-
+<p><b>Assumption:</b> Learning outcomes are shaped by systems, not just effort.</p>
+<p><b>Strength:</b> Promotes fairness and participation across all learners.</p>
+<p><b>Weakness:</b> Difficult to fully implement in structured classroom settings.</p>
+<p><b>My Teaching:</b> Balance group roles and encourage quieter voices.</p>
+<p><b>Class connection:</b> “Single stories” in STEM education.</p>
 <p><a href="https://teach.its.uiowa.edu/book/export/html/582">Read article</a></p>
 </div>
 
 <!-- GROUP WORK -->
 <div class="section orange">
 <h2>👥 Group Work</h2>
-
-<p><b>Assumption:</b> Learning is social and improves through collaboration.</p>
-
-<p><b>Strength:</b> Encourages deeper thinking and multiple problem-solving strategies.</p>
-
-<p><b>Weakness:</b> Participation can be uneven among group members.</p>
-
-<p><b>My Teaching:</b> Use Think–Pair–Share and intentionally group students by engagement.</p>
-
-<p><b>Class connection:</b> We practiced facilitation strategies and group structure design.</p>
+<p><b>Assumption:</b> Learning is social and constructed through interaction.</p>
+<p><b>Strength:</b> Encourages reasoning and collaboration.</p>
+<p><b>Weakness:</b> Unequal participation in groups.</p>
+<p><b>My Teaching:</b> Think–Pair–Share structure.</p>
+<p><b>Class connection:</b> Facilitation strategies for equity.</p>
 </div>
 
 <!-- QUESTIONING -->
 <div class="section yellow">
 <h2>❓ Questioning</h2>
-
-<p><b>Assumption:</b> Questions drive understanding better than direct answers.</p>
-
-<p><b>Strength:</b> Builds conceptual understanding and critical thinking.</p>
-
-<p><b>Weakness:</b> Hard to design effective questions spontaneously.</p>
-
-<p><b>My Teaching:</b> Use structured questioning (Costa’s Levels) and intentional wait time.</p>
-
-<p><b>Class connection:</b> We practiced Bloom’s Taxonomy and levels of questioning.</p>
-
+<p><b>Assumption:</b> Questions drive deeper thinking than answers.</p>
+<p><b>Strength:</b> Builds conceptual understanding.</p>
+<p><b>Weakness:</b> Hard to design effective questions in real time.</p>
+<p><b>My Teaching:</b> Use wait time + scaffolded questions.</p>
+<p><b>Class connection:</b> Bloom’s Taxonomy + Costa’s Levels.</p>
 <p><a href="http://levelquestions.weebly.com/costas.html">View Costa’s Levels</a></p>
 </div>
 
