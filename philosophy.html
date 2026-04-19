@@ -1,14 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Teaching Philosophy</title>
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.navbar a {
+  color: white;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #1abc9c;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #1abc9c;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1abc9c, #3498db);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* =========================
+   REFLECTION CARDS
+========================= */
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease forwards;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card:nth-of-type(1) { animation-delay: 0.2s; }
+.card:nth-of-type(2) { animation-delay: 0.4s; }
+.card:nth-of-type(3) { animation-delay: 0.6s; }
+.card:nth-of-type(4) { animation-delay: 0.8s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TEXT STYLING
+========================= */
+h2 {
+  color: #1abc9c;
+}
+
+.highlight {
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+.quote {
+  font-style: italic;
+  opacity: 0.9;
+  border-left: 3px solid #1abc9c;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
 <div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="concepts.html">Concepts</a>
-  <a href="application.html">Application</a>
-  <a href="connections.html">Connections</a>
-  <a href="philosophy.html">My Teaching</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="concepts.html">📚 Concepts</a>
+  <a href="application.html">🛠️ Application</a>
+  <a href="philosophy.html">🌱 My Teaching</a>
 </div>
 
-<h1>My Teaching Philosophy after EDCS 417</h1>
+<!-- HERO -->
+<div class="hero">
+  <h1>🌱 Moving Forward as an Educator</h1>
+  <p>My teaching philosophy after EDCS 417 — from learning theory → classroom practice → future application</p>
+</div>
 
-<p>- Students learn through discussion and interaction</p>
-<p>- All students bring their own strengths and hold their own forms of captial</p>
-<p>- Teaching should be inclusive and individualized</p>
-<p>- I use questioning > answers, which recieved constant positive feedback from students</p>
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="card">
+    <h2>📌 What I Now Understand About Learning</h2>
+    <p>
+      Before this course, I thought teaching was primarily about explaining content clearly.
+      Now I understand that learning is not transmission — it is <span class="highlight">construction through interaction, questioning, and reflection</span>.
+    </p>
+
+    <p class="quote">
+      “Students do not simply receive knowledge — they build it through experience, dialogue, and feedback.”
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Recognizing Student Strengths</h2>
+    <p>
+      A major shift in my thinking is recognizing that students bring
+      <span class="highlight">cultural, social, and academic capital</span> into the classroom.
+    </p>
+
+    <p>
+      Instead of focusing on what students lack, I now focus on how to
+      <b>activate what they already know</b> and connect it to new ideas.
+    </p>
+
+    <p class="quote">
+      This reframes teaching from “fixing gaps” to “building from strengths.”
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🤝 Teaching as Facilitation, Not Delivery</h2>
+    <p>
+      One of the most important lessons from EDCS 417 is that effective teaching requires shifting from
+      <span class="highlight">“sage on the stage” to “guide on the side.”</span>
+    </p>
+
+    <p>
+      Strategies like Think-Pair-Share, wait time, and structured questioning
+      are not just techniques — they are tools that
+      <b>redistribute voice and support equity in participation</b>.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>❓ The Power of Questions</h2>
+    <p>
+      I have learned that strong teaching is not defined by providing answers,
+      but by asking questions that guide thinking.
+    </p>
+
+    <p>
+      Using wait time, layered questioning, and follow-ups allows students to
+      develop deeper reasoning instead of surface-level responses.
+    </p>
+
+    <p class="quote">
+      In practice, questioning became more powerful than explanation.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🚀 Moving Forward</h2>
+    <p>
+      As I move forward, my goal is to intentionally apply these ideas in real classroom settings:
+    </p>
+
+    <p>
+      • Design learning environments centered on student thinking<br>
+      • Use equitable participation structures in group work<br>
+      • Prioritize growth mindset feedback over correctness alone<br>
+      • Continuously reflect and adapt based on student needs
+    </p>
+
+    <p class="quote">
+      Teaching is not a finished skill — it is an evolving practice shaped by reflection and experience.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
