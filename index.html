@@ -4,45 +4,239 @@
 <title>EDCS 417 Guide</title>
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
 body {
-  font-family: Arial;
-  background: #f4f6f8;
-  margin: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  animation: fadeIn 0.8s ease;
 }
 
-h1 { color: #2c3e50; }
+/* fade in page */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   NAVBAR (consistent theme)
+========================= */
+.navbar {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.navbar a {
+  color: white;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #1abc9c;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #1abc9c;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
 .box {
-  background: white;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
   padding: 20px;
   margin: 20px 0;
-  border-radius: 10px;
+  border-radius: 15px;
+
+  backdrop-filter: blur(10px);
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease forwards;
 }
 
-a { color: #3498db; }
-</style>
+.box:nth-of-type(1) { animation-delay: 0.2s; }
+.box:nth-of-type(2) { animation-delay: 0.4s; }
+.box:nth-of-type(3) { animation-delay: 0.6s; }
 
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: #1abc9c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   TAGS / BADGES
+========================= */
+.tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 5px 5px 0 0;
+  font-size: 12px;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR (UPDATED — removed Connections) -->
 <div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="concepts.html">Concepts</a>
-  <a href="application.html">Application</a>
-  <a href="connections.html">Connections</a>
-  <a href="philosophy.html">My Teaching</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="concepts.html">📚 Concepts</a>
+  <a href="application.html">🛠️ Application</a>
+  <a href="philosophy.html">🌱 My Teaching</a>
 </div>
 
-<h1>EDCS 417 STEM Pedagogy Guide</h1>
-<p>By Breanna Aimoe</p>
+<!-- HERO -->
+<div class="hero">
+  <h1>EDCS 417 STEM Pedagogy Guide</h1>
+  <p>By Breanna Aimoe • A synthesis of STEM teaching, learning theory, and classroom practice</p>
+</div>
 
-<div class="box">
-<h2>Explore</h2>
-<a href="concepts.html">Concepts</a>
-<a href="application.html">Application</a>
-<a href="connections.html">Connections</a>
-<a href="philosophy.html">My Teaching</a>
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="box">
+    <h2>🌱 What This Website Is</h2>
+    <p>
+      This site is a structured synthesis of the EDCS 417 STEM Pedagogy course.
+      It brings together key theories, teaching strategies, and classroom applications
+      from across the semester into one interactive guide.
+    </p>
+    <p>
+      It is designed as a <b>quick reference + reflection tool</b> for STEM educators,
+      summarizing major ideas like growth mindset, equity, questioning strategies,
+      and collaborative learning.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>📘 Explore the Course Ideas</h2>
+
+    <p>
+      <a href="concepts.html">Concepts Page</a> – Key theories like growth mindset, equity, questioning, and group work
+    </p>
+
+    <p>
+      <a href="application.html">Application Page</a> – How these ideas are used in real classrooms
+    </p>
+
+    <p>
+      <a href="philosophy.html">My Teaching Philosophy</a> – How I apply STEM pedagogy in practice
+    </p>
+
+    <span class="tag">Growth Mindset</span>
+    <span class="tag">Equity</span>
+    <span class="tag">Questioning</span>
+    <span class="tag">Collaboration</span>
+  </div>
+
+  <div class="box">
+    <h2>🧠 Quick Study & Teaching Resources</h2>
+
+    <p>📄 Growth Mindset (Dweck overview):</p>
+    <a href="https://www.youtube.com/watch?v=hiiEeMN7vbQ" target="_blank">Watch Video</a>
+
+    <p>📄 Wait Time & Questioning Strategies:</p>
+    <a href="http://levelquestions.weebly.com/costas.html" target="_blank">Costa’s Levels of Questions</a>
+
+    <p>📄 Equity in STEM Education:</p>
+    <a href="https://teach.its.uiowa.edu/book/export/html/582" target="_blank">Read Article</a>
+
+    <p>📄 Strength-Based Education:</p>
+    <a href="https://99percentinvisible.org/episode/on-average/" target="_blank">Listen Podcast</a>
+  </div>
+
+  <div class="box">
+    <h2>📊 Course Themes (Big Picture)</h2>
+
+    <p>
+      Across EDCS 417, the major ideas connect into four core themes:
+    </p>
+
+    <ul>
+      <li>🌱 Student-centered learning (growth mindset, strengths-based teaching)</li>
+      <li>🤝 Equity & inclusion in STEM spaces</li>
+      <li>❓ Questioning + discourse as tools for learning</li>
+      <li>👥 Collaboration & structured group work</li>
+    </ul>
+
+    <p>
+      Together, these ideas support the goal of creating more <b>accessible, engaging, and reflective STEM classrooms</b>.
+    </p>
+  </div>
+
 </div>
 
 </body>
